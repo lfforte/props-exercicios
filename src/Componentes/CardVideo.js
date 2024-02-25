@@ -1,16 +1,18 @@
 import InfosUsuario from "./InfosUsuario";
 
+const nomeUser = 'LuizZzZ';
+const imgUser = 'https://picsum.photos/id/64/100/100';
 
-export default function CardVideo() {
+export default function CardVideo(props) {
     const titulo = "Título do vídeo";
     function reproduzVideo() {
         alert("O vídeo está sendo reproduzido");
     }
     return (
         <div className="box-pagina-principal" onClick={reproduzVideo}>
-            <img src="https://picsum.photos/400/400?a=1 " alt="" />
-            <h4>{titulo}</h4>
-            <InfosUsuario/>
+            <img src={props.imgVideo} alt="" />
+            <h3>{props.nomeVideo}</h3>
+            <InfosUsuario nome={nomeUser} imgUser={imgUser} />
         </div>
     )
 
